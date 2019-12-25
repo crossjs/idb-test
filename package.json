@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "p": "bash ./deploy.sh"
+  },
   "dependencies": {
     "chai": "^4.2.0",
     "idb-keyval": "^3.2.0",
