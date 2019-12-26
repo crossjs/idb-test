@@ -1,6 +1,6 @@
 import "regenerator-runtime";
 import { expect } from "chai";
-import { get, set, del, clear, keys } from "idb-keyval";
+import { get, set, del, clear, keys } from "idb-keyval/dist/idb-keyval-cjs-compat.min";
 import bigKey from "./big-key";
 import bigValue from "./big-value";
 

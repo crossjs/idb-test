@@ -10,6 +10,7 @@
     "chai": "^4.2.0",
     "idb-keyval": "^3.2.0",
     "mocha": "^6.2.2",
+    "nuo": "^1.1.0",
     "regenerator-runtime": "^0.13.3"
   }
 }

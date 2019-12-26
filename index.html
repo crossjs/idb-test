@@ -3,7 +3,32 @@
     <link rel="stylesheet" href="./node_modules/mocha/mocha.css" />
   </head>
   <body>
+    <p>hello</p>
+    <div id="user-agent"></div>
+    <div id="global-error"></div>
     <div id="mocha"></div>
+    <p>world</p>
+    <script>
+      document.getElementById("user-agent").innerHTML = navigator.userAgent;
+      window.onerror = function(message, source, lineno, colno, error) {
+        document.getElementById("global-error").innerHTML =
+          "<dl>" +
+          "<dt>message:</dt><dd>" +
+          message +
+          "</dd>" +
+          "<dt>source:</dt><dd>" +
+          source +
+          "</dd>" +
+          "<dt>lineno:</dt><dd>" +
+          lineno +
+          "</dd>" +
+          "<dt>colno:</dt><dd>" +
+          colno +
+          "</dd>" +
+          "</dl>";
+      };
+    </script>
+    <script src="./promise.js"></script>
     <script src="./node_modules/mocha/mocha.js"></script>
     <script>
       mocha.setup("bdd");
