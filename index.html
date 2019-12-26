@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="mocha.a794bc00.css">
+  </head>
+  <body>
+    <p>hello</p>
+    <div id="user-agent"></div>
+    <div id="global-error"></div>
+    <div id="mocha"></div>
+    <p>world</p>
+    <script>document.getElementById("user-agent").innerHTML = navigator.userAgent;
+
+window.onerror = function (message, source, lineno, colno, error) {
+  document.getElementById("global-error").innerHTML = "<dl>" + "<dt>message:</dt><dd>" + message + "</dd>" + "<dt>source:</dt><dd>" + source + "</dd>" + "<dt>lineno:</dt><dd>" + lineno + "</dd>" + "<dt>colno:</dt><dd>" + colno + "</dd>" + "</dl>";
+};</script>
+    <script src="promise.7b611e3b.js"></script>
+    <script src="mocha.7645d95f.js"></script>
+    <script>mocha.setup("bdd");
+mocha.timeout(60000);</script>
+    <script src="idb-test.102d137d.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>
