@@ -2,7 +2,7 @@ echo "Deploying..."
 
 rm -rf dist
 
-parcel build index.html
+parcel build --public-url '.' index.html
 
 # commit
 cd dist
